@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div data-role="page" id="page-1" data-theme="a">
+		<div data-role="header" data-theme="a">
+			<h1>Demo</h1>
+		</div>
+		<div data-role="content">
+			<p>Page content goes here.</p>
+			<a href="#page-3" id="button-1" class="ui-btn ui-icon-clock ui-btn-icon-left ui-corner-all">Link button</a>
+			
+			<form action="http://localhost:8080/jboss-as-kitchensink-html5-mobile/rest/members/0" method="get">
+			<div class="ui-input-btn ui-btn ui-icon-heart ui-btn-icon-left ui-corner-all ui-btn-a">
+				Submit
+				<input data-enhanced="true" type="submit" value="Submit" id="button-2"/>
+			</div>
+			</form>
+		</div>
+		<div data-role="footer" data-theme="a">
+			<h4>Page Footer</h4>
+		</div>
+	</div>
+	<div data-role="page" id="page-2">
+		<div data-role="header">
+			<h1>Page 2</h1>
+		</div>
+		<div data-role="content">
+			<p>Page content goes here.</p>
+		</div>
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div>
+	</div>
+	<div data-role="page" id="page-3">
+		<div data-role="header">
+			<a href="#" data-role="button" data-rel="back" data-icon="back">Back</a>
+			<h1>Page 3</h1>
+		</div>
+		<div data-role="content">
+			<p>Page content goes here.</p>
+		</div>
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div>
+	</div>
+</body>
+</html>
