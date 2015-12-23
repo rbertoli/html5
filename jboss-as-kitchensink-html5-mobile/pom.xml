@@ -19,11 +19,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.tools.example.html5</groupId>
-    <artifactId>jboss-as-kitchensink-html5-mobile</artifactId>
+    <artifactId>trials</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>jboss-as-kitchensink-html5-mobile</name>
+    <name>trials</name>
     <description>A Java EE 6 HTML5 mobile web application for use with JBoss.</description>
 
     <url>http://jboss.org/aerogear</url>
@@ -207,12 +207,26 @@
                 </configuration>
             </plugin>
             <!-- The JBoss AS plugin deploys your war to a local JBoss AS container -->
+            
             <!-- To use, run: mvn package jboss-as:deploy -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.jboss.maven.plugin}</version>
             </plugin>
+            
+            <!-- To use, run: mvn package wildfly:deploy -->            
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.0.2.Final</version>
+				<configuration>
+					<hostname>192.168.178.60</hostname>
+					<port>9990</port>
+					<username>bla</username>
+					<password>bla</password>
+				</configuration>
+			</plugin>            
             
         </plugins>
     </build>
